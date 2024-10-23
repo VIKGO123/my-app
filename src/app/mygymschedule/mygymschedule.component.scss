@@ -1,0 +1,63 @@
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Styling the container */
+.schedule-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f0f4f8;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Title styles */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #2e86de;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Section (Day) header */
+h2 {
+    font-size: 2rem;
+    margin: 20px 0;
+    color: #34495e;
+}
+
+/* List styling */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #e8f1f2;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Set and rep span */
+li span {
+    font-weight: bold;
+    color: #2d3436;
+}
+
+/* Adding hover effect */
+li:hover {
+    background-color: #d1e8e2;
+    transform: scale(1.02);
+    transition: 0.2s ease-in-out;
+}

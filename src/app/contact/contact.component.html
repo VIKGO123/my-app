@@ -1,0 +1,38 @@
+<div class="container mt-5">
+    <h2>Contact Us</h2>
+    
+    <!-- The form uses formGroup to bind the TS form with the HTML form -->
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="mt-4">
+      
+      <!-- Name Input -->
+      <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input id="name" type="text" class="form-control" formControlName="name" placeholder="Enter your name" />
+        <div *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched" class="text-danger">
+          Name is required and should be at least 2 characters long.
+        </div>
+      </div>
+  
+      <!-- Email Input -->
+      <div class="mb-3">
+        <label for="email" class="form-label">Email address</label>
+        <input id="email" type="email" class="form-control" formControlName="email" placeholder="name@example.com" />
+        <div *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched" class="text-danger">
+          Please provide a valid email.
+        </div>
+      </div>
+  
+      <!-- Message Input -->
+      <div class="mb-3">
+        <label for="message" class="form-label">Message</label>
+        <textarea id="message" class="form-control" rows="5" formControlName="message" placeholder="Your message"></textarea>
+        <div *ngIf="contactForm.get('message')?.invalid && contactForm.get('message')?.touched" class="text-danger">
+          Message should be at least 10 characters long.
+        </div>
+      </div>
+  
+      <!-- Submit Button -->
+      <button type="submit" class="btn btn-primary" [disabled]="contactForm.invalid">Submit</button>
+    </form>
+  </div>
+  
